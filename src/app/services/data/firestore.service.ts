@@ -31,8 +31,6 @@ export class FirestoreService {
   }
 
   deleteSong(song: Song) {
-    console.log(song.id);
-
     const placeDocRef = doc(this.firestore, `songList/${song.id}`);
     return deleteDoc(placeDocRef);
   }
