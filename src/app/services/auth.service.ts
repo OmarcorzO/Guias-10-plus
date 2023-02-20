@@ -4,6 +4,7 @@ import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
   sendPasswordResetEmail,
+  authState
 } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 
@@ -48,5 +49,10 @@ export class AuthService {
       localStorage.removeItem('user');
       this.router.navigateByUrl('');
     });
+  }
+
+  getUser() {
+    let user = this.afAuth.currentUser;
+    return user;
   }
 }

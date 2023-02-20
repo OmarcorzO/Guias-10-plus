@@ -3,15 +3,24 @@
     <ion-title>
       Ionic Blank
     </ion-title>
-    <ion-buttons slot="start">
+    <!-- <ion-buttons slot="start">
       <ion-button routerLink="/create">
         <ion-icon slot="icon-only" name="add"></ion-icon>
       </ion-button>
-    </ion-buttons>
+    </ion-buttons> -->
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <ion-button routerLink="/event-create" expand="block" color="primary">
+    Create a new event
+  </ion-button>
+  <ion-button routerLink="/event-list" expand="block" color="primary">
+    See your events
+  </ion-button>
+</ion-content>
+
+<!-- <ion-content [fullscreen]="true">
   <ion-card *ngFor="let song of songList" routerLink="/detail/{{song.id}}">
     <ion-card-header>
       {{ song.songName }}
@@ -20,4 +29,4 @@
       Artist Name: {{ song.artistName }}
     </ion-card-content>
   </ion-card>
-</ion-content>
+</ion-content> -->
